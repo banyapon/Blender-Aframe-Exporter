@@ -1,5 +1,5 @@
 import bpy
-from . import aframe_exporter  # นำเข้าโมดูลที่มีคลาส ExportAFrame
+from . import aframe_exporter
 
 bl_info = {
     "name": "A-Frame Exporter",
@@ -7,7 +7,7 @@ bl_info = {
     "version": (1, 0, 0),
     "blender": (3, 0, 0),
     "location": "File > Export",
-    "description": "Export Blender scene to A-Frame HTML and GLB",
+    "description": "Export Blender scene to A-Frame HTML and GLB for WebXR",
     "warning": "",
     "category": "Export",
 }
