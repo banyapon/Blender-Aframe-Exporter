@@ -20,40 +20,31 @@ class ExportAFrame(bpy.types.Operator, ExportHelper):
 <!DOCTYPE html>
 <html>
 <head>
-    <script src="https://aframe.io/releases/1.ุ.0/aframe.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script> 
-
-    <script>
-        AFRAME.registerComponent('camera-control', 
- {{
-            init: function() {{
-                this.el.setAttribute('wasd-controls', '');
-                this.el.setAttribute('look-controls', '');
-            }}
-        }});
-    </script>
+    <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/n5ro/aframe-physics-system@v4.0.1/dist/aframe-physics-system.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/donmccurdy/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
 </head>
 <body>
     <a-scene physics>
         <a-assets>
             <a-asset-item id="model" src="{os.path.basename(glb_filepath)}"></a-asset-item>
         </a-assets>
-        <a-entity
-            id="camera-rig"
-            position="0 1.6 0"
-            movement-controls="speed: 0.2"
-            camera-control
-        >
+
+        <a-entity id="cameraRig" movement-controls="fly: false; speed: 0.2;">
             <a-entity
+                id="camera"
                 camera
-                position="0 0 0"
+                position="0 1.6 0"
                 look-controls="pointerLockEnabled: true"
+                wasd-controls
+                dynamic-body="mass: 0"
+                collision-filter="group: camera; collidesWith: all"
             ></a-entity>
         </a-entity>
+
         <a-entity
             gltf-model="#model"
             static-body
-            geometry="primitive: box"
             collision-filter="group: all; collidesWith: all"
         ></a-entity>
     </a-scene>
