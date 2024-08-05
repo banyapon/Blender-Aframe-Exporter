@@ -14,7 +14,7 @@ This Blender add-on simplifies the process of exporting your 3D scenes into inte
 
 ## Installation
 
-1. Download the latest release of the add-on (`.zip` file) from the [Releases](https://github.com/your-username/blender-aframe-exporter/releases) page.
+1. Download the latest release of the add-on (`.zip` file) from the [Releases](https://github.com/banyapon/Blender-Aframe-Exporter/releases/tag/release) page.
 2. In Blender, go to `Edit` > `Preferences` > `Add-ons` > `Install...`
 3. Select the downloaded `.zip` file and click `Install Add-on`.
 4. Enable the "A-Frame Exporter" add-on in the list.
