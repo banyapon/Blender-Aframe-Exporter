@@ -30,7 +30,7 @@ This Blender add-on simplifies the process of exporting your 3D scenes into inte
 ![Create Scene](https://github.com/banyapon/Blender-Aframe-Exporter/blob/main/dist/5.png?raw=true)
 2. Go to `File` > `Export` > `A-Frame (.html)`.
 
-![Export Aframe](https://github.com/banyapon/Blender-Aframe-Exporter/blob/main/dist/6.png?raw=true)
+    ![Export Aframe](https://github.com/banyapon/Blender-Aframe-Exporter/blob/main/dist/6.png?raw=true)
 
 3. Choose a location to save the files and click `Export A-Frame`.
 ![VS Code](https://github.com/banyapon/Blender-Aframe-Exporter/blob/main/dist/7.png?raw=true)
