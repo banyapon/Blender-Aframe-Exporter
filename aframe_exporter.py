@@ -21,6 +21,7 @@ class ExportAFrame(bpy.types.Operator, ExportHelper):
 <!DOCTYPE html>
 <html>
 <head>
+    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/banyapon/Blender-Aframe-Exporter/main/icons/favicon.ico">
     <title>Aframe Exporter</title>
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
 </head>
