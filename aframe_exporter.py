@@ -1,5 +1,6 @@
 import bpy
 import os
+import shutil
 from bpy_extras.io_utils import ExportHelper
 
 class ExportAFrame(bpy.types.Operator, ExportHelper):
@@ -14,14 +15,19 @@ class ExportAFrame(bpy.types.Operator, ExportHelper):
         # Export GLB
         bpy.ops.export_scene.gltf(filepath=glb_filepath, export_format='GLB')
 
-        # สร้างไฟล์ HTML (A-Frame)
+        # Copy favicon.ico if it exists
+        favicon_path = os.path.join(os.path.dirname(__file__), "icons", "favicon.ico") 
+        if os.path.exists(favicon_path):
+            shutil.copy(favicon_path, os.path.dirname(filepath)) 
+
+        # Create HTML (A-Frame)
         with open(filepath, "w") as f:
             f.write(f"""
 <!--This file generated from Aframe Exporter, Blender Add-on-->
 <!DOCTYPE html>
 <html>
 <head>
-    <link rel="icon" type="image/x-icon" href="https://raw.githubusercontent.com/banyapon/Blender-Aframe-Exporter/main/icons/favicon.ico">
+    <link rel="icon" href="favicon.ico"> 
     <title>Aframe Exporter</title>
     <script src="https://aframe.io/releases/1.6.0/aframe.min.js"></script>
 </head>
