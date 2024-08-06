@@ -33,7 +33,7 @@ class ExportAFrame(bpy.types.Operator, ExportHelper):
         </a-assets>
 
         <a-entity id="cameraRig" movement-controls="fly: false; speed: 0.2;">
-            <a-entity id="camera" camera position="0 1.6 0" wasd-controls></a-entity>
+            <a-entity id="camera" camera look-controls position="0 1.6 0" wasd-controls></a-entity>
             <a-entity oculus-touch-controls="hand: left"></a-entity>
             <a-entity oculus-touch-controls="hand: right"></a-entity>
         </a-entity>
