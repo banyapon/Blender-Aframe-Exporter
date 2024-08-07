@@ -4,10 +4,10 @@ from . import aframe_exporter
 bl_info = {
     "name": "A-Frame Exporter",
     "author": "Banyapon Poolsawas",
-    "version": (1, 0, 2),
-    "blender": (4, 0, 1),
-    "location": "File > Export",
-    "description": "Export Blender scene to A-Frame HTML and GLB for WebXR",
+    "version": (1, 0, 5), 
+    "blender": (4, 0, 0),
+    "location": "File > Export, Scene Properties > A-Frame Export Settings",
+    "description": "Export Blender scene to A-Frame HTML and GLB with local server",
     "warning": "",
     "category": "Export",
 }
